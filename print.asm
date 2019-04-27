@@ -3,7 +3,7 @@ BITS 32
 extern printf
 
 section .rodata
-    hello_world: db "Namah Shivaya!", 10, 0
+    text: db "Namah Shivaya!", 10, 0
 
 section .text
     global main
@@ -12,7 +12,7 @@ section .text
         push ebp
         mov ebp, esp
 
-        push hello_world
+        push text
         call printf
         add esp, 4
 
